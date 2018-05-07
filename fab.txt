@@ -1,0 +1,8 @@
+fab -p sw_integration -H 10.80.105.179 -- 'df -lh'
+fab -f fabric_simple4.py put_task
+fab -f fabric_simple4.py tar_task
+fab -f fabric_simple4.py check_task
+fab -f fabric_simple4.py go
+fab -f fabric_simple3.py go
+fab -f fabric_simple2.py go
+fab -f fabric_simple1.py remote_task
