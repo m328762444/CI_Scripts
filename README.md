@@ -31,4 +31,5 @@ submodule
 	git submodule foreach --recursive git pull origin master >/dev/null
 	echo "git submodule foreach --recursive git reset --hard origin/master"
 	git submodule foreach --recursive git reset --hard origin/master > /dev/null
-
+taginfo:
+	For android project:python setTag.py branchname ABC_MY19_MAINLINE.json
