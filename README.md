@@ -36,3 +36,19 @@ Scripts Used for CI Build based on gerrit/bitbucket and other useful scripts
 ## taginfo:
 ### taginfo/setTag.py:
 	For android project:python setTag.py branchname ABC_MY19_MAINLINE.json
+## changelist:
+	Get Changelists for project use repo manifest
+### changelist/Android_Stash_ChangeList_1.py:
+	Android_Stash_ChangeList_1.py to generate a file contains the difference commitid between PreTag and NowTag on the BRANCH and their path.
+	input===> 
+	os.environ['BRANCH’] to get the projects in .repo/manifest.xml on BRANCH
+	os.envirom['PreTag'] is the pretag manifestfile
+	os.environ['NowTag'] is the NowTag manifestfile
+	output===>
+	Android_Stash_ChangeList_1.txt
+### changelist/Android_Stash_Changelist_2.pl:
+	Android_Stash_Changelist_2.pl generate the changelist between two Tags.
+	input===> Android_Stash_ChangeList_1.txt
+	output===> Android_Stash_ChangeList_2.html
+	for add projects will get the number of project merged changenumbers to get the project changelist.
+	
